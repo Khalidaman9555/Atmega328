@@ -166,11 +166,6 @@ u8 LCD_u8NumbertoChar(u8 Copy_u8Number) {
 	return (Copy_u8Number + 0x30);
 }
 
-void void_Convert_u32_to_string(u32 Copy_u32Number, u8 *str) {
-	memset ((u8*) str , '\0' , 4);
-	sprintf (str , "%d" , Copy_u32Number);
-}
-
 void LCD_voidSendf32Number(LCD_stConfiguration *Copy_PstConfiguration, f32 Copy_f64Number)
 {
 	u8 dot_point_location = 0;
@@ -210,16 +205,6 @@ void LCD_voidShiftScreenLeft(LCD_stConfiguration *Copy_pstconfig) {
 	LCD_voidSendCommand (Copy_pstconfig , LCD_u8ShiftAll_Left);
 }
 
-void LCD_voidSendString_Position(LCD_stConfiguration *Copy_pstconfig, u8 *Copy_pu8String, u8 Copy_u8Row, u8 Copy_u8Colum)
-{
-	LCD_voidSetCur (Copy_pstconfig , Copy_u8Row , Copy_u8Colum);
-	LCD_voidSendString (Copy_pstconfig , Copy_pu8String);
-}
-void LCD_voidSendCharacter_Position(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Char, u8 Copy_u8Row, u8 Copy_u8Colum)
-{
-	LCD_voidSetCur (Copy_pstconfig , Copy_u8Row , Copy_u8Colum);
-	LCD_voidSendCharacter (Copy_pstconfig , Copy_u8Char);
-}
 void LCD_voidSetCur(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Row, u8 Copy_u8Colum)
 {
 	if (Copy_pstconfig && Copy_u8Colum <= LCD_u8Col20 && Copy_u8Row <= LCD_u8Row4)
@@ -228,4 +213,14 @@ void LCD_voidSetCur(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Row, u8 Copy_
 	} else {
 		/*empty*/
 	}
+}
+void LCD_voidSendCharacter_Position(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Char, u8 Copy_u8Row, u8 Copy_u8Colum)
+{
+	LCD_voidSetCur (Copy_pstconfig , Copy_u8Row , Copy_u8Colum);
+	LCD_voidSendCharacter (Copy_pstconfig , Copy_u8Char);
+}
+void LCD_voidSendString_Position(LCD_stConfiguration *Copy_pstconfig, u8 *Copy_pu8String, u8 Copy_u8Row, u8 Copy_u8Colum)
+{
+	LCD_voidSetCur (Copy_pstconfig , Copy_u8Row , Copy_u8Colum);
+	LCD_voidSendString (Copy_pstconfig , Copy_pu8String);
 }

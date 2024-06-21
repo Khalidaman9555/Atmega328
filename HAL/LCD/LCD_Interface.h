@@ -75,7 +75,9 @@ typedef struct {
 } LCD_stConfiguration;
 
 void LCD_voidInit(LCD_stConfiguration *Copy_PstConfiguration);
+
 void LCD_voidSendCommand(LCD_stConfiguration *Copy_PstConfiguration, u8 Copy_u8Command);
+
 void LCD_voidSendCharacter(LCD_stConfiguration *Copy_PstConfiguration, u8 Copy_u8Character);
 
 void LCD_voidClearDisplay(LCD_stConfiguration *Copy_PstConfiguration);
@@ -84,7 +86,9 @@ void LCD_voidSendString(LCD_stConfiguration *Copy_PstConfiguration, u8 *Copy_Pu8
 
 u8 LCD_u8NumbertoChar(u8 Copy_u8Number);
 
-void LCD_voidSetCur(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Row, u8 Copy_u8Colum);
+void LCD_voidSendf32Number(LCD_stConfiguration *Copy_PstConfiguration, f32 Copy_f64Number);
+
+void LCD_voidDelay1sec(void);
 
 void LCD_voidShiftCurRight(LCD_stConfiguration *Copy_pstconfig);
 void LCD_voidShiftCurLeft(LCD_stConfiguration *Copy_pstconfig);
@@ -92,8 +96,8 @@ void LCD_voidShiftCurLeft(LCD_stConfiguration *Copy_pstconfig);
 void LCD_voidShiftScreenRight(LCD_stConfiguration *Copy_pstconfig);
 void LCD_voidShiftScreenLeft(LCD_stConfiguration *Copy_pstconfig);
 
-void LCD_voidSendString_Position(LCD_stConfiguration *Copy_pstconfig, u8 *Copy_pu8String, u8 Copy_u8Row, u8 Copy_u8Colum);
-
+void LCD_voidSetCur(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Row, u8 Copy_u8Colum);
 void LCD_voidSendCharacter_Position(LCD_stConfiguration *Copy_pstconfig, u8 Copy_u8Char, u8 Copy_u8Row, u8 Copy_u8Colum);
+void LCD_voidSendString_Position(LCD_stConfiguration *Copy_pstconfig, u8 *Copy_pu8String, u8 Copy_u8Row, u8 Copy_u8Colum);
 
 #endif /* HAL_LCD_LCD_INTERFACE_H_ */

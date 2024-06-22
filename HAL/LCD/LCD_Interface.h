@@ -86,6 +86,7 @@ void LCD_voidSendString(LCD_stConfiguration *Copy_PstConfiguration, u8 *Copy_Pu8
 
 u8 LCD_u8NumbertoChar(u8 Copy_u8Number);
 
+void LCD_voidSendu32Number(LCD_stConfiguration *Copy_pstconfig, u32 num);
 void LCD_voidSendf32Number(LCD_stConfiguration *Copy_PstConfiguration, f32 Copy_f64Number);
 
 void LCD_voidDelay1sec(void);

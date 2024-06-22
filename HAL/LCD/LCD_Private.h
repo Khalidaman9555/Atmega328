@@ -21,7 +21,6 @@
 //HALF-FUNCTION SET (4-BIT_MODE)
 #define LCD_u84BIT_HALF_FUNCTION_SET 0x22
 
-
 //DISPLAY ON/OFF Option Macros
 #define LCD_u8_DisplayON 0x04
 #define LCD_u8_DisplayOFF 0x00

@@ -166,6 +166,33 @@ u8 LCD_u8NumbertoChar(u8 Copy_u8Number) {
 	return (Copy_u8Number + 0x30);
 }
 
+void LCD_voidSendu32Number(LCD_stConfiguration *Copy_pstconfig, u32 num) {
+	u8 *str;
+	u8 i = 0;
+
+	// Handle the base case (number is 0)
+	if (num == 0) {
+		str[i++] = '0';
+		str[i] = '\0';
+		return;
+	}
+
+	// Find the number of digits
+	long long int temp = num;
+	while (temp != 0) {
+		temp /= 10;
+		i++;
+	}
+
+	// Reverse the digits and store them as characters
+	str[i] = '\0'; // Null terminate the string
+	while (num != 0) {
+		int remainder = num % 10;
+		str[--i] = remainder + '0'; // Convert digit to ASCII character
+		num /= 10;
+	}
+	LCD_voidSendString (Copy_pstconfig , str);
+}
 void LCD_voidSendf32Number(LCD_stConfiguration *Copy_PstConfiguration, f32 Copy_f64Number)
 {
 	u8 dot_point_location = 0;
@@ -224,3 +251,4 @@ void LCD_voidSendString_Position(LCD_stConfiguration *Copy_pstconfig, u8 *Copy_p
 	LCD_voidSetCur (Copy_pstconfig , Copy_u8Row , Copy_u8Colum);
 	LCD_voidSendString (Copy_pstconfig , Copy_pu8String);
 }
+

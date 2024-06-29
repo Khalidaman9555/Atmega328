@@ -18,20 +18,6 @@
 #define ADC_VoltReference ADC_VREF_AVCC
 
 /*
- *  Options:-
- *   	 1-ADC_SINGLE_CONVERSION
- *   	 2-ADC_FREE_RUNNING
- *   	 3-ADC_ANALOG_COMPARATOR
- *   	 4-ADC_EXTI0
- *   	 5-ADC_TIM0_CTC
- *   	 6-ADC_TIM0_OVF
- *   	 7-ADC_TIM1_CTC_CHANNEL_B
- *   	 8-ADC_TIM1_OVF
- *   	 9-ADC_TIM1_ICU
- */
-#define ADC_TRIGGERING_SOURCE   ADC_SINGLE_CONVERSION
-
-/*
  * Prescaler options:
  * ADC_PS_2
  * ADC_PS_4
@@ -43,20 +29,11 @@
  */
 #define ADC_PS ADC_PS_128
 
-#define  ADC_TIMEOUT      50000
-
 /*
  * Result Adjustment Options :
  * ADC_ADLAR
  * ADC_ADRAR
  */
 #define ADC_Result_Adjustment ADC_ADRAR
-
-/*
- * Options:-
- *  1-ADC_ENABLE
- *  2-ADC_DISABLE
- */
-#define ADC_STATUS   ADC_ENABLE
 
 #endif /* MCAL_ADC_ADC_CONFIG_H_ */

@@ -8,14 +8,6 @@
 #ifndef MCAL_ADC_ADC_PRIVATE_H_
 #define MCAL_ADC_ADC_PRIVATE_H_
 
-/* Bit Masking Macros  */
-/* Bit Masking Macros  */
-#define ADC_Pre_Mask				0b11111000
-#define ADC_Ch_Mask			    0b11100000
-
-#define ADC_DISABLE             0
-#define ADC_ENABLE              1
-
 /*ADMUX REGESTER BITS*/
 #define ADC_ADCMUX_MUX0_BIT       0
 #define ADC_ADCMUX_MUX1_BIT       1
@@ -56,19 +48,5 @@
 #define ADC_ADCH_REG (*(volatile u8*) 0x79)
 #define ADC_ADCL_REG (*(volatile u8*) 0x78)
 #define ADC_DATA_RE  (*(volatile u16*)0x78)		//ADC Low + High
-
-/* Values of the global var (ADC_u8ISRSource)  */
-#define SINGLE_CHANNEL_ASYNCH 0
-#define CHAIN_CHANNEL_ASYNCH  1
-
-#define ADC_SINGLE_CONVERSION   0
-#define ADC_FREE_RUNNING        1
-#define ADC_ANALOG_COMPARATOR   2
-#define ADC_EXTI0               3
-#define ADC_TIM0_CTC            4
-#define ADC_TIM0_OVF            5
-#define ADC_TIM1_CTC_CHANNEL_B  6
-#define ADC_TIM1_OVF            7
-#define ADC_TIM1_ICU            8
 
 #endif /* MCAL_ADC_ADC_PRIVATE_H_ */

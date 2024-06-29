@@ -56,7 +56,7 @@ void DIO_voidGetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 *Copy_Pu8Return);
  * @u8 Copy_u8Direction
  * Return: void
  */
-void DIO_voidSetPortDirection(u8 Copy_u8Port,u8 Copy_u8Direction);
+void DIO_voidSetPortDirection(u8 Copy_u8Port, u8 Copy_u8Direction);
 
 /*Name: DIO_voidSetPortValue
  * Description:To set port value.
@@ -65,7 +65,7 @@ void DIO_voidSetPortDirection(u8 Copy_u8Port,u8 Copy_u8Direction);
  * @u8 Copy_u8Value
  * Return: void
  */
-void DIO_voidSetPortValue(u8 Copy_u8Port,u8 Copy_u8Value);
+void DIO_voidSetPortValue(u8 Copy_u8Port, u8 Copy_u8Value);
 
 /*Name: DIO_voidGetPortValue
  * Description:To get port value.
@@ -74,7 +74,7 @@ void DIO_voidSetPortValue(u8 Copy_u8Port,u8 Copy_u8Value);
  * @u8* Copy_Pu8Return
  * Return: void
  */
-void DIO_voidGetPortValue(u8 Copy_u8Port,u8* Copy_Pu8Return);
+void DIO_voidGetPortValue(u8 Copy_u8Port, u8 *Copy_Pu8Return);
 
 //4BIT level
 /*Name: DIO_voidSet4BitDirection
@@ -85,7 +85,7 @@ void DIO_voidGetPortValue(u8 Copy_u8Port,u8* Copy_Pu8Return);
  * @u8 Copy_u8Direction
  * Return: void
  */
-void DIO_voidSet4BitDirection(u8 Copy_u8Port,u8 Copy_u8FMOLSBit,u8 Copy_u8Direction);
+void DIO_voidSet4BitDirection(u8 Copy_u8Port, u8 Copy_u8FMOLSBit, u8 Copy_u8Direction);
 
 /*Name: DIO_voidSet4BitValue
  * Description:To set 4bit value.
@@ -95,7 +95,7 @@ void DIO_voidSet4BitDirection(u8 Copy_u8Port,u8 Copy_u8FMOLSBit,u8 Copy_u8Direct
  * @u8 Copy_u8Value
  * Return: void
  */
-void DIO_voidSet4BitValue(u8 Copy_u8Port,u8 Copy_u8FMOLSBit,u8 Copy_u8Value);
+void DIO_voidSet4BitValue(u8 Copy_u8Port, u8 Copy_u8FMOLSBit, u8 Copy_u8Value);
 
 /*Name: DIO_voidGet4BitValue
  * Description:To get 4bit value.
@@ -105,6 +105,6 @@ void DIO_voidSet4BitValue(u8 Copy_u8Port,u8 Copy_u8FMOLSBit,u8 Copy_u8Value);
  * @u8* Copy_Pu8Return
  * Return: void
  */
-void DIO_voidGet4BitValue(u8 Copy_u8Port,u8 Copy_u8FMOLSBit,u8* Copy_Pu8Return);
+void DIO_voidGet4BitValue(u8 Copy_u8Port, u8 Copy_u8FMOLSBit, u8 *Copy_Pu8Return);
 
 #endif /* MCAL_DIO_DIO_INTERFACE_H_ */

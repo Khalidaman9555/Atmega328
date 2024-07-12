@@ -34,6 +34,6 @@
  * ADC_ADLAR
  * ADC_ADRAR
  */
-#define ADC_Result_Adjustment ADC_ADRAR
+#define ADC_Result_Adjustment ADC_ADLAR
 
 #endif /* MCAL_ADC_ADC_CONFIG_H_ */
